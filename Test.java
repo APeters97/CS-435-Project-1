@@ -20,7 +20,7 @@ public class Test
 	
 	public void mySort(int[] list)	//problem 2c, a sort that utilizes BST properties
 	{
-		if(list.length == 0)
+		if(list.length == 0)	//if list is empty, return
 			return;
 		
 		int pivot = list[0];	//chooses first index of list as 'root'
