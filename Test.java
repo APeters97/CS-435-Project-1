@@ -37,7 +37,7 @@ public class Test
 		while(count < n)	//add numbers while count is less than parameter number
 		{
 			randomNum = rand.nextInt(n) + 1;
-			if(myList.contains(randomNum) == false)	//only add if the number is not in the list alread
+			if(myList.contains(randomNum) == false)	//only add if the number is not in the list already
 			{
 				myList.add(randomNum);
 				count++;

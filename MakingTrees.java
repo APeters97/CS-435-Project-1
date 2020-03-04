@@ -88,7 +88,7 @@ public class MakingTrees
 		System.out.println();
 		IterativeBST iterTree6c = new IterativeBST();	//create Iterative BST
 		IterativeBBST iterAVL6c = new IterativeBBST();	//create Iterative AVL
-		ArrayList<Integer> randomList6c = arrays.getSortedArray(50);	//create sorted array
+		ArrayList<Integer> randomList6c = arrays.getSortedArray(10000);	//create sorted array
 		
 		System.out.println("Start making iterative tree");
 		long startTime6c = System.currentTimeMillis();	//track time
@@ -102,7 +102,9 @@ public class MakingTrees
 		System.out.println("Start making iterative AVL");
 		long startTimeAVL6c = System.currentTimeMillis();	//track time
 		for(int i = 0; i < randomList6c.size(); i++)		//add numbers to iterative AVL
+		{
 			iterAVL6c = iterAVL6c.insertIter(iterAVL6c, randomList6c.get(i));
+		}
 		long endTimeAVL6c = System.currentTimeMillis();	//track time
 		System.out.println("Done making iterative AVL");
 		System.out.println("Total time in milliseconds: " + ((endTimeAVL6c-startTimeAVL6c)));

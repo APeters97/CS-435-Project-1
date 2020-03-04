@@ -21,14 +21,19 @@ public class IterativeBBST
 		tree1 = tree1.insertIter(tree1, 16);
 		tree1 = tree1.insertIter(tree1, 4);
 		tree1 = tree1.insertIter(tree1, 8);
-		System.out.print("Before rotation: " + tree1.root.value + " ");
-		System.out.print(tree1.root.left.value + " ");
-		System.out.print(tree1.root.left.left.value + " ");
+		System.out.println("Before rotation:");
+		System.out.println(tree1.root.value == 13);
+		System.out.println(tree1.root.left.value == 10);
+		System.out.println(tree1.root.left.left.value == 5);
 		tree1 = tree1.insertIter(tree1, 3);
-		System.out.println();
-		System.out.print("After rotation: " + tree1.root.value + " ");
-		System.out.print(tree1.root.left.value + " ");
-		System.out.println(tree1.root.left.left.value + " ");
+		//System.out.println();
+		System.out.println("After rotation");
+		System.out.println(tree1.root.value == 13);
+		System.out.println(tree1.root.left.value == 5);
+		System.out.println(tree1.root.left.left.value == 4);
+		System.out.println(tree1.root.left.left.left.value == 3);
+		System.out.println(tree1.root.left.right.value == 10);
+		System.out.println(tree1.root.left.right.left.value == 8);
 		System.out.println();
 		
 		
@@ -39,14 +44,18 @@ public class IterativeBBST
 		tree2 = tree2.insertIter(tree2, 35);
 		tree2 = tree2.insertIter(tree2, 32);
 		tree2 = tree2.insertIter(tree2, 40);
-		System.out.print("Before rotation: " + tree2.root.value + " ");
-		System.out.print(tree2.root.right.value + " ");
-		System.out.print(tree2.root.right.right.value + " ");
+		System.out.println("Before rotation");
+		System.out.println(tree2.root.value == 30);
+		System.out.println(tree2.root.right.value == 35);
+		System.out.println(tree2.root.right.right.value == 40);
 		tree2 = tree2.insertIter(tree2, 45);
-		System.out.println();
-		System.out.print("After rotation: " + tree2.root.value + " ");
-		System.out.print(tree2.root.right.value + " ");
-		System.out.println(tree2.root.right.right.value + " ");
+		//System.out.println();
+		System.out.println("After rotation");
+		System.out.println(tree2.root.value == 35);
+		System.out.println(tree2.root.left.value == 30);
+		System.out.println(tree2.root.right.value == 40);
+		System.out.println(tree2.root.left.right.value == 32);
+		System.out.println(tree2.root.right.right.value == 45);
 		System.out.println();
 		
 		//LEFT-RIGHT ROTATION TEST
@@ -59,18 +68,23 @@ public class IterativeBBST
 		tree3 = tree3.insertIter(tree3, 16);
 		tree3 = tree3.insertIter(tree3, 4);
 		tree3 = tree3.insertIter(tree3, 6);
-		System.out.print("Before rotation: " + tree3.root.value + " ");
-		System.out.print(tree3.root.left.value + " ");
-		System.out.print(tree3.root.left.left.value + " ");
-		System.out.print(tree3.root.left.left.left.value + " ");
-		System.out.print(tree3.root.left.left.right.value + " ");
+		System.out.print("Before rotation");
+		System.out.println(tree3.root.value == 13);
+		System.out.println(tree3.root.left.value == 10);
+		System.out.println(tree3.root.left.right.value == 11);
+		System.out.println(tree3.root.left.left.value == 5);
+		System.out.println(tree3.root.left.left.left.value == 4);
+		System.out.println(tree3.root.left.left.right.value == 6);
 		tree3 = tree3.insertIter(tree3, 7);
-		System.out.println();
-		System.out.print("After rotation: " + tree3.root.value + " ");
-		System.out.print(tree3.root.left.value + " ");
-		System.out.print(tree3.root.left.left.value + " ");
-		System.out.print(tree3.root.left.right.value + " ");
-		System.out.println(tree3.root.left.left.left.value + " ");
+		//System.out.println();
+		System.out.println("After rotation");
+		System.out.println(tree3.root.value == 13);
+		System.out.println(tree3.root.left.value == 6);
+		System.out.println(tree3.root.left.left.value == 5);
+		System.out.println(tree3.root.left.right.value == 10);
+		System.out.println(tree3.root.left.left.left.value == 4);
+		System.out.println(tree3.root.left.right.left.value == 7);
+		System.out.println(tree3.root.left.right.right.value == 11);
 		System.out.println();
 		
 		//RIGHT-LEFT ROTATION TEST
@@ -84,21 +98,23 @@ public class IterativeBBST
 		tree4 = tree4.insertIter(tree4, 9);
 		tree4 = tree4.insertIter(tree4, 3);
 		tree4 = tree4.insertIter(tree4, 16);
-		System.out.print("Before rotation: " + tree4.root.value + " ");
-		System.out.print(tree4.root.right.value + " ");
-		System.out.print(tree4.root.right.left.value + " ");
-		System.out.print(tree4.root.right.right.value + " ");
-		System.out.print(tree4.root.right.right.right.value + " ");
+		System.out.println("Before rotation");
+		System.out.println(tree4.root.value == 5);
+		System.out.println(tree4.root.right.value == 7);
+		System.out.println(tree4.root.right.left.value == 6);
+		System.out.println(tree4.root.right.right.value == 9);
+		System.out.println(tree4.root.right.right.right.value == 16);
 		tree4 = tree4.insertIter(tree4, 15);
-		System.out.println();
-		System.out.print("After rotation: " + tree4.root.value + " ");
-		System.out.print(tree4.root.right.value + " ");
-		System.out.print(tree4.root.right.left.value + " ");
-		System.out.print(tree4.root.right.right.value + " ");
-		System.out.print(tree4.root.right.right.left.value + " ");
-		System.out.print(tree4.root.right.right.right.value + " ");
-        
+		//System.out.println();
+		System.out.println("After rotation");
+		System.out.println(tree4.root.value == 5);
+		System.out.println(tree4.root.right.value == 7);
+		System.out.println(tree4.root.right.left.value == 6);
+		System.out.println(tree4.root.right.right.value == 15);
+		System.out.println(tree4.root.right.right.left.value == 9);
+		System.out.println(tree4.root.right.right.right.value == 16);
 	}
+	
 	public IterativeBBST insertIter(IterativeBBST t, int value)
 	{
 		Node toAdd = new Node(value);	//creates new node with value to be added
@@ -106,14 +122,13 @@ public class IterativeBBST
     	if(t.root == null)		//if tree is empty, add new node to root
     	{
     		t.root = toAdd;
-    		System.out.println("Traversed " + levelsDown + " levels to add " + value);
+    		//System.out.println("Traversed " + levelsDown + " levels to add " + value);
     		return t;
     	}
     	
     	Node travel = t.root;		//set helper node to root
     	while(travel != null)		//use helper node to traverse through the tree
     	{
-    		//System.out.println("a");
     		if(toAdd.value < travel.value)	//if value is less than current node, go to left child
     		{
     			if(travel.left != null)		//only go left is the left child is not empty
@@ -145,7 +160,7 @@ public class IterativeBBST
     			}
     		}
     	}
-    	System.out.println("Traversed " + levelsDown + " levels to add " + value);	//print out how many levels were traversed to add node
+    	//System.out.println("Traversed " + levelsDown + " levels to add " + value);	//print out how many levels were traversed to add node
     	
     	//after adding node to the tree:
        	calculateNodeHeights();	//call method to calculate height of every node
@@ -159,7 +174,6 @@ public class IterativeBBST
        			if(travel.parent != null)	//as long as parent isn't null(so on the root), do next while loop iteration
        				continue;
        		}
-       		
        		//at this point, travel has gotten to the node where the rotation needs to be done
        		
        		Node parentNode = travel.parent;	//store parent node of original node
@@ -171,16 +185,17 @@ public class IterativeBBST
 	       		else if(parentNode.right != null && parentNode.right.value == travel.value)
 	       			isRight = true;
        		}
-       		//Right Rotation
-       		if(travel.BF > 1 && value < travel.left.value)
+
+   			if(travel.BF > 1 && value < travel.left.value)
        		{
        			travel = rightRotation(travel);	//perform rotation
-       			calculateNodeBFs();		//recalculate BFs
        			travel.parent = parentNode;	//reassign parent variable
        			if(travel.parent == null)	//if parent is null(so the root), reassign root
        			{
        				travel.parent = null;
        				root = travel;
+       				calculateNodeHeights();		//recalculate heights
+           			calculateNodeBFs();		//recalculate BFs
        			}
        			else	//assign parent's left or right child to new node
        			{
@@ -188,19 +203,23 @@ public class IterativeBBST
        					parentNode.left = travel;
        				else if(isRight)
        					parentNode.right = travel;
+       				//parentNode.left = travel;
+       				calculateNodeHeights();		//recalculate heights
+           			calculateNodeBFs();		//recalculate BFs
            			travel = travel.parent;		//continue traversal
        			}
        		}
-       		//Left Rotation
+       		//Right-Right Case (does left rotation)
        		else if(travel.BF < -1 && value > travel.right.value)
        		{
        			travel = leftRotation(travel);	//perform rotation
-       			calculateNodeBFs();		//recalculate BFs
        			travel.parent = parentNode;		//reassign parent variable
        			if(travel.parent == null)	//if parent is null(so the root), reassign root
        			{
        				travel.parent = null;
        				root = travel;
+       				calculateNodeHeights();		//recalculate heights
+           			calculateNodeBFs();		//recalculate BFs
        			}
        			else	//assign parent's left or right child to new node
        			{
@@ -208,20 +227,26 @@ public class IterativeBBST
        					parentNode.left = travel;
        				else if(isRight)
        					parentNode.right = travel;
+       				//parentNode.right = travel;
+       				calculateNodeHeights();		//recalculate heights
+           			calculateNodeBFs();		//recalculate BFs
        				travel = travel.parent;		//continue traversal
        			}
        		}
-       		//Left-Right Rotation
+       		//Left-Right Case (does left rotation then right rotation)
        		else if(travel.BF > 1 && value > travel.left.value)
        		{
        			travel.left = leftRotation(travel.left);	//perform left rotation
+       			travel.left.parent = travel;
+       			calculateNodeHeights();		//recalculate heights
        			travel = rightRotation(travel);				//perform right rotation
-       			calculateNodeBFs();			//recalculate BFs
        			travel.parent = parentNode;		//reassign parent variable
        			if(travel.parent == null)	//if parent is null(so the root), reassign root
        			{
        				travel.parent = null;
        				root = travel;
+       				calculateNodeHeights();		//recalculate heights
+           			calculateNodeBFs();			//recalculate BFs
        			}
        			else		//assign parent's left or right child to new node
        			{	
@@ -229,20 +254,26 @@ public class IterativeBBST
        					parentNode.left = travel;
        				else if(isRight)
        					parentNode.right = travel;
+       				//parentNode.left = travel;
+       				calculateNodeHeights();		//recalculate heights
+           			calculateNodeBFs();			//recalculate BFs
        				travel = travel.parent;		//continue traversal
        			}
        		}
-       		//Right-Left Rotation
+       		//Right-Left Case (does right rotation then left rotation)
        		else if(travel.BF < -1 && value < travel.right.value)
        		{
        			travel.right = rightRotation(travel.right);	//perform right rotation
+       			travel.right.parent = travel;
+       			calculateNodeHeights();		//recalculate heights
        			travel = leftRotation(travel);		//perform left rotation
-       			calculateNodeBFs();		//recalculate BFs
        			travel.parent = parentNode;		//reassign parent variable
        			if(travel.parent == null)		//if parent is null(so the root), reassign root
        			{
        				travel.parent = null;
        				root = travel;
+       				calculateNodeHeights();		//recalculate heights
+           			calculateNodeBFs();		//recalculate BFs
        			}
        			else		//assign parent's left or right child to new node
        			{
@@ -250,9 +281,12 @@ public class IterativeBBST
        					parentNode.left = travel;
        				else if(isRight)
        					parentNode.right = travel;
+       				//parentNode.right = travel;
+       				calculateNodeHeights();		//recalculate heights
+           			calculateNodeBFs();		//recalculate BFs
        				travel = travel.parent;		//continue traversal
        			}
-       		}	
+       		}
        	}
        	
     	return t;	//return tree
@@ -260,28 +294,44 @@ public class IterativeBBST
 	
 	public IterativeBBST delete(IterativeBBST t, int value)
 	{
+		Node travel = t.root;		//set helper node to root
+    	int levelsDown = 0;
 		if(t.root == null)		//if tree is empty, return
+		{
+			System.out.println("Traversed " + levelsDown + " levels to delete " + value);
     		return t;
-    	
-    	Node travel = t.root;		//set helper node to root
+		}
     	while(travel != null)		//use helper node to traverse through the tree
     	{
     		if(value < travel.value)	//if value is less than current node, go to left child
     		{
     			if(travel.left != null)		//only go left is the left child is not empty
+    			{
     				travel = travel.left;
+    				levelsDown++;
+    			}
     			else	//if left child is empty, value is not found, so stop deletion process
+    			{
+    				System.out.println(value + " was not in the tree");
     				break;
+    			}
     		}
     		else if(value > travel.value)	//if value is greater than current node, go to right child
     		{
     			if(travel.right != null)	//only go right if the right child is not empty
+    			{
     				travel = travel.right;
+    				levelsDown++;
+    			}
     			else	//if right child is empty, value is not found, so stop deletion process
+    			{
+    				System.out.println(value + " was not in the tree");
     				break;
+    			}
     		}
     		else	//the current node is the value to be deleted
     		{
+    			System.out.println("Traversed " + levelsDown + " levels to delete " + value);
     			//code to find smallest node of subtree
     		}
     	}
@@ -315,23 +365,23 @@ public class IterativeBBST
     	}
 	}
 	
-	public int calculateHeight(Node n)
+	public int calculateHeight(Node n)	//calculate height of node
 	{
 		 if (n == null) 	//if node is empty, return 0
 			 return 0; 
 		   
 		 Queue<Node> q = new LinkedList<Node>();	//create Queue for storage
 		 q.add(n); 
-		 int height = 0; 
+		 int height = 0; 	//height counter variable
 		 while (true)
 		 {
 			 int nodeCount = q.size();
-			 if (nodeCount == 0)
+			 if (nodeCount == 0)	//once all nodes have been accounted for, return height
 				 return height;
 			 
-			 height++;
+			 height++;	//increment height
 			 
-			 while (nodeCount > 0)
+			 while (nodeCount > 0)		//add nodes to queue, and traverse left or right
 			 { 
 				 Node temp = q.peek();
 				 q.remove();
@@ -375,7 +425,7 @@ public class IterativeBBST
 		if(n == null)	//if node is empty, return
 			return 0;
 		
-		return getHeight(n.left) - getHeight(n.right);
+		return (getHeight(n.left) - getHeight(n.right));
 	}
 	
 	public int getHeight(Node n)	//return the height of a node
@@ -397,7 +447,7 @@ public class IterativeBBST
 	public Node leftRotation(Node n)	//does left rotation on parameter node
 	{
 		Node temp = n.right; 	//get the value of right child
-        Node T2 = temp.left; 	//get left subtree of n's right child
+		Node T2 = temp.left; 	//get left subtree of n's right child        
   
         temp.left = n; 	//swap values to do rotation
         n.right = T2; 	//swap values to do rotation
@@ -411,7 +461,7 @@ public class IterativeBBST
 	public Node rightRotation(Node n)	//does right rotation on parameter node
 	{
 		Node temp = n.left; 	//get the value of left child
-        Node T2 = temp.right; 	//get right subtree of n's left child
+		Node T2 = temp.right; 	//get right subtree of n's left child
         
         temp.right = n; 	//swap values to do rotation
         n.left = T2; 	//swap values to do rotation
@@ -486,19 +536,35 @@ public class IterativeBBST
     
     public int findMinIter(Node n)	//finds smallest node in tree
     {
+    	int levelsDown = 0;
     	if(n == null)		//if tree is empty, return -1
+    	{
+    		System.out.println("The tree is empty");
     		return -1;
+    	}
     	while(n.left != null)	//go as far left as possible
+    	{
     		n = n.left;
+    		levelsDown++;
+    	}
+    	System.out.println("Traversed " + levelsDown + " levevls to find the minimum value of " + n.value);
     	return n.value;		//once as far left as possible, return current node
     }
     
     public int findMaxIter(Node n)	//finds largest node in tree
     {
+    	int levelsDown = 0;
     	if(n == null)	//if tree is empty, return -1
+    	{
+    		System.out.println("The tree is empty");
     		return -1;
+    	}
     	while(n.right != null)		//go as far right as possible
+    	{
     		n = n.right;
+    		levelsDown++;
+    	}
+    	System.out.println("Traversed " + levelsDown + " levevls to find the maximum value of " + n.value);
     	return n.value;		//once as far right as possible, return current node
     }
 }

@@ -40,7 +40,7 @@ public class IterativeBST
     	if(t.root == null)		//if tree is empty, add new node to root
     	{
     		t.root = toAdd;
-    		System.out.println("Traversed " + levelsDown + " levels to add " + value);
+    		//System.out.println("Traversed " + levelsDown + " levels to add " + value);
     		return t;
     	}
     	
@@ -76,7 +76,7 @@ public class IterativeBST
     			}
     		}
     	}
-    	System.out.println("Traversed " + levelsDown + " levels to add " + value);
+    	//System.out.println("Traversed " + levelsDown + " levels to add " + value);
     	return t;	//return tree
     }
     
