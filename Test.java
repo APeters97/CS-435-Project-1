@@ -5,6 +5,7 @@ public class Test
 	public static void main(String[] args)
 	{
 		Test test1 = new Test();	//test 1, random list
+		
 		int[] list = {5, 1, 6, 2, 7, 10, 3, 8, 4, 9};
 		test1.mySort(list);
 		System.out.println();
@@ -16,6 +17,43 @@ public class Test
 		int[] list3 = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};	//test 3, descending order list
 		test1.mySort(list3);
 		System.out.println();
+		
+		ArrayList<Integer> testArray1 = test1.getRandomArray(20);
+		for(int i = 0; i < testArray1.size(); i++)
+			System.out.print(testArray1.get(i) + " ");
+		System.out.println();
+		
+		ArrayList<Integer> testArray2 = test1.getSortedArray(20);
+		for(int i = 0; i < testArray2.size(); i++)
+			System.out.print(testArray2.get(i) + " ");
+	}
+	
+	public ArrayList<Integer> getRandomArray(int n)		//returns a list of random numbers
+	{
+		Random rand = new Random();		
+		ArrayList<Integer> myList = new ArrayList<Integer>();	//create empty list
+		int count = 0;		//used to track how many numbers have been added to list
+		Integer randomNum;
+		while(count < n)	//add numbers while count is less than parameter number
+		{
+			randomNum = rand.nextInt(n) + 1;
+			if(myList.contains(randomNum) == false)	//only add if the number is not in the list alread
+			{
+				myList.add(randomNum);
+				count++;
+			}
+		}
+		return myList;		//return list
+	}
+	
+	public ArrayList<Integer> getSortedArray(int n)		//returns a list of sorted descending numbers
+	{
+		ArrayList<Integer> myList = new ArrayList<Integer>();	//creates empty list
+		for(int i = n; i > 0; i--)	//traverse starting at n going down
+		{
+			myList.add(i);		//add to list
+		}
+		return myList;		//return list
 	}
 	
 	public void mySort(int[] list)	//problem 2c, a sort that utilizes BST properties

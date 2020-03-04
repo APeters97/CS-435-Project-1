@@ -1,11 +1,13 @@
 class Node
 {
-    int value;
-    Node left, right;
+    int value, height, BF;
+    Node left, right, parent;
         
     public Node(int item)
     {
         value = item;
-        left = right = null;
+        height = 1;
+        BF = 0;
+        left = right = parent = null;
     }
 }

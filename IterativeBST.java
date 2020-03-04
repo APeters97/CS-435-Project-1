@@ -36,9 +36,11 @@ public class IterativeBST
     public IterativeBST insertIter(IterativeBST t, int value)	//inserts new value to tree
     {
     	Node toAdd = new Node(value);	//creates new node with value to be added
+    	int levelsDown = 0;
     	if(t.root == null)		//if tree is empty, add new node to root
     	{
     		t.root = toAdd;
+    		System.out.println("Traversed " + levelsDown + " levels to add " + value);
     		return t;
     	}
     	
@@ -48,24 +50,33 @@ public class IterativeBST
     		if(toAdd.value < travel.value)	//if value is less than current node, go to left child
     		{
     			if(travel.left != null)		//only go left is the left child is not empty
+    			{
     				travel = travel.left;
+    				levelsDown++;
+    			}
     			else	//if left child is empty, add new node to left child
     			{
     				travel.left = toAdd;
+    				levelsDown++;
     				break;
     			}
     		}
     		else if(toAdd.value > travel.value)	//if value is greater than current node, go to right child
     		{
     			if(travel.right != null)	//only go right if the right child is not empty
+    			{
     				travel = travel.right;
+    				levelsDown++;
+    			}
     			else	//if right child is empty, add new node to right child
     			{
     				travel.right = toAdd;
+    				levelsDown++;
     				break;
     			}
     		}
-    	}    	
+    	}
+    	System.out.println("Traversed " + levelsDown + " levels to add " + value);
     	return t;	//return tree
     }
     
