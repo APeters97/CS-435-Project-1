@@ -4,7 +4,7 @@ public class MakingTrees
 {
 	public static void main(String[]args)
 	{
-		Test arrays = new Test();
+		Test arrays = new Test(); //array functions are found in Test class
 		
 		//QUESTION 5a
 		System.out.println("QUESTION 5a");

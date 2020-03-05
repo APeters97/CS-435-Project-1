@@ -72,7 +72,7 @@ public class RecursiveBST
             n.right = delete(n.right, value);
         else	//the current node is the value to be deleted
         {
-        	//code to find smallest node of subtree
+        	//code to find smallest element for replacement
         }
         
         return n;	//need this because of java logic

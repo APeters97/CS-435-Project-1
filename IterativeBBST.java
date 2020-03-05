@@ -122,7 +122,7 @@ public class IterativeBBST
     	if(t.root == null)		//if tree is empty, add new node to root
     	{
     		t.root = toAdd;
-    		//System.out.println("Traversed " + levelsDown + " levels to add " + value);
+    		System.out.println("Traversed " + levelsDown + " levels to add " + value);
     		return t;
     	}
     	
@@ -160,7 +160,7 @@ public class IterativeBBST
     			}
     		}
     	}
-    	//System.out.println("Traversed " + levelsDown + " levels to add " + value);	//print out how many levels were traversed to add node
+    	System.out.println("Traversed " + levelsDown + " levels to add " + value);	//print out how many levels were traversed to add node
     	
     	//after adding node to the tree:
        	calculateNodeHeights();	//call method to calculate height of every node
@@ -305,36 +305,27 @@ public class IterativeBBST
     	{
     		if(value < travel.value)	//if value is less than current node, go to left child
     		{
-    			if(travel.left != null)		//only go left is the left child is not empty
-    			{
-    				travel = travel.left;
-    				levelsDown++;
-    			}
-    			else	//if left child is empty, value is not found, so stop deletion process
-    			{
-    				System.out.println(value + " was not in the tree");
-    				break;
-    			}
+    			travel = travel.left;
+    			levelsDown++;
     		}
     		else if(value > travel.value)	//if value is greater than current node, go to right child
     		{
-    			if(travel.right != null)	//only go right if the right child is not empty
-    			{
-    				travel = travel.right;
-    				levelsDown++;
-    			}
-    			else	//if right child is empty, value is not found, so stop deletion process
-    			{
-    				System.out.println(value + " was not in the tree");
-    				break;
-    			}
+    			travel = travel.right;
+    			levelsDown++;
     		}
     		else	//the current node is the value to be deleted
     		{
     			System.out.println("Traversed " + levelsDown + " levels to delete " + value);
-    			//code to find smallest node of subtree
+    			break;
     		}
     	}
+    	if(travel == null)	//if value is not in tree, travel becomes null, so print out that value was not found
+    	{
+    		System.out.println(value + " was not in the tree");
+    		return t;
+    	}
+    	
+    	
     	
     	return t;	//return tree
 	}
